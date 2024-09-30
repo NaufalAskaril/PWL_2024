@@ -6,8 +6,15 @@ use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
 {
-    public function articles($id) {
-        return "Halaman Artikel dengan ID: {$id}";
+    public function hello() {
+        return ('Hello World');
     }
+    public function greeting() {
+        return view('blog.hello') 
+        ->with('name','Naufal')
+        ->with('occupation','Astronaut');
+
+    }
+
     
 }
