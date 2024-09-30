@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/user/{name?}', function ($name='Naufal') {
-    return 'Nama saya '.$name;
-});
+Route::resource('photos', PhotoController::class);
+
+
